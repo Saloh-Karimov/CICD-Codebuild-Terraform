@@ -1,2 +1,2 @@
-# launch-ec2-instance
-Deploying a static (HTML) website on an EC2 instance created using Terraform in the default VPC
+# CICD-Codebuild-Terraform
+Creating a CodeBuild job that automatically applies the Terraform scripts whenever changes are committed to the GitHub repository
