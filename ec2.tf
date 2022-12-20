@@ -11,12 +11,12 @@ terraform {
     bucket  = "cicd-codebuild-terraform-project"
     key     = "build/terraform.tfstate"
     region  = "us-east-1"
-  profile   = "terraform-user" 
+    profile = "terraform-user" 
   }
 }
 
 
-# create default vpc if one does not exit
+# create default vpc if one does not exist
 resource "aws_default_vpc" "default_vpc" {
 
   tags    = {
