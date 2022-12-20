@@ -5,7 +5,18 @@ provider "aws" {
 }
 
 
-# create default vpc if one does not exit
+# store the terraform state file in s3
+terraform {
+  backend "s3" {
+    bucket  = "cicd-codebuild-terraform-project"
+    key     = "build/terraform.tfstate"
+    region  = "us-east-1"
+    profile = "terraform-user" 
+  }
+}
+
+
+# create default vpc if one does not exist
 resource "aws_default_vpc" "default_vpc" {
 
   tags    = {
