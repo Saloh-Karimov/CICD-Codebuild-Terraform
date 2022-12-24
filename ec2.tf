@@ -8,7 +8,7 @@ provider "aws" {
 # store the terraform state file in s3
 terraform {
   backend "s3" {
-    bucket  = "cicd-codebuild-terraform-project"
+    bucket  = "saloh-cicd-codebuild-terraform"
     key     = "build/terraform.tfstate"
     region  = "us-east-1"
     profile = "terraform-user" 
