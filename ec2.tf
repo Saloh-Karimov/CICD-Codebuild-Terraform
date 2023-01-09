@@ -106,7 +106,7 @@ resource "aws_instance" "ec2_instance" {
 }
 
 
-# print the ec2's public ipv4 address
-output "public_ipv4_address" {
-  value = aws_instance.ec2_instance.public_ip
+# print the url of the server
+output "ec2_public_ipv4_url" {
+  value = join("", ["http://", aws_instance.ec2_instance.public_ip])
 }
